@@ -2,9 +2,13 @@ import React from 'react';
 
 const SmallBlock = ({ photo }) => {
   return (
-    <div className="bg-white w-full h-full flex-col">
-      <div className=" max-w-lg">
-        <img src={photo} alt="img" />
+    <div className="bg-white w-full h-full flex-col group cursor-pointer">
+      <div className=" max-w-lg overflow-hidden">
+        <img
+          src={photo}
+          alt="img "
+          className="group-hover:scale-110 transition-transform duration-300"
+        />
       </div>
       <div className="max-w-sm p-4">
         <h2 className=" text-2xl font-bold mb-6">

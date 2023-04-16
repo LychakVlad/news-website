@@ -2,10 +2,14 @@ import React from 'react';
 
 const BigBlock = ({ photo }) => {
   return (
-    <div className="bg-white col-start-1 col-end-4">
+    <div className="bg-white col-start-1 col-end-4 relative group cursor-pointer">
       <div className="flex min-h-full">
-        <div className=" max-w-lg min-h-full">
-          <img src={photo} alt="img" className="w-full h-full  object-cover" />
+        <div className=" max-w-lg min-h-full overflow-hidden">
+          <img
+            src={photo}
+            alt="img"
+            className="w-full h-full  object-cover group-hover:scale-110 transition-transform duration-300"
+          />
         </div>
         <div className="max-w-sm p-10">
           <h2 className=" text-2xl font-bold mb-6">

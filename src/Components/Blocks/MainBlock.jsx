@@ -8,7 +8,6 @@ const MainBlock = () => {
   return (
     <div className="flex w-full min-h-screen flex-col  px-20">
       <SecondTitle title="Hot News 🔥" />
-
       <div className="flex mb-2">
         <MainNews />
         <SideNews />

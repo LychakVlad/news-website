@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="bg-gray-100">
       <Header />
+
       <MainBlock />
     </div>
   );

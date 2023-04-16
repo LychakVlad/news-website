@@ -4,6 +4,7 @@ import Photo from '../../assets/test.jpeg';
 import SmallBlock from '../NewsBlocks/SmallBlock';
 import SecondTitle from '../Titles/SecondTitle';
 import BgBlock from '../NewsBlocks/BgBlock';
+import NoImgBlock from '../NewsBlocks/NoImgBlock';
 
 const SecondaryNews = () => {
   return (
@@ -13,8 +14,8 @@ const SecondaryNews = () => {
         <BgBlock photo={Photo} />
         <SmallBlock photo={Photo} />
         <SmallBlock photo={Photo} />
-        <SmallBlock photo={Photo} />
-        <SmallBlock photo={Photo} />
+        <NoImgBlock />
+        <NoImgBlock />
       </div>
     </div>
   );
