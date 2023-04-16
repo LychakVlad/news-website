@@ -1,4 +1,5 @@
 import React from 'react';
+import SecondTitle from '../Titles/SecondTitle';
 
 const NoImgBlock = () => {
   return (
@@ -6,9 +7,7 @@ const NoImgBlock = () => {
       <div className="max-w-sm p-4 flex flex-col h-full justify-between">
         <p className="text-neutral-400">#pets</p>
         <div>
-          <h2 className=" text-4xl font-bold  flex mb-6">
-            Pet Arrives Home, Dog-Tired, After Alaskan Sea-Ice Odyssey
-          </h2>
+          <SecondTitle title={'Pet Arrives Home, Dog-Tired, After Alaskan Sea-Ice Odyssey'} />
           <p className="text-lg mb-6">
             A 1-year-old Australian shepherd took an epic trek across 150 miles
             of frozen Bering Sea ice before being safely returned to his home in

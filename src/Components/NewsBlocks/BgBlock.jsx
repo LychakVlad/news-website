@@ -1,5 +1,6 @@
 import React from 'react';
 import photo from '../../assets/test.jpeg';
+import SecondTitle from '../Titles/SecondTitle';
 
 const BgBlock = () => {
   return (
@@ -12,13 +13,13 @@ const BgBlock = () => {
             className=" object-cover object-center w-full h-full group-hover:scale-110 transition-transform duration-300"
           />
         </div>
-        <div className=" p-10 relative w-full h-full flex flex-col justify-end bg-gray-950 bg-opacity-40">
-          <h2 className=" text-4xl font-bold mb-6 text-white max-w-2xl">
-            Pet Arrives Home, Dog-Tired, After Alaskan Sea-Ice Odyssey
-          </h2>
+        <div className=" p-10 relative w-full h-full flex flex-col justify-end bg-gray-950 bg-opacity-40 text-white">
+          <SecondTitle
+            title={'Pet Arrives Home, Dog-Tired, After Alaskan Sea-Ice Odyssey'}
+          />
           <div className="flex text-lg">
-            <p className="mr-4 text-white">3:30 PM</p>
-            <p className="text-white">#pets</p>
+            <p className="mr-4 ">3:30 PM</p>
+            <p className="">#pets</p>
           </div>
         </div>
       </div>
