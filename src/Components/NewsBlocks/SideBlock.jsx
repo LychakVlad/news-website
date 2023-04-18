@@ -1,9 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SideBlock = ({ content }) => {
+  const router = useNavigate();
   return (
-    <div>
-      <div className="relative mb-8 cursor-pointer">
+    <div onClick={() => router(`/news-website/${content.id}`)}>
+      <div className="relative mb-8 cursor-pointer" key={content.id}>
         <p className="mb-2">
           {content.overview.length > 100
             ? content.overview.slice(0, 100) + '...'

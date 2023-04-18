@@ -7,6 +7,7 @@ import { fetchNews } from '../../API/NewsAPI';
 
 const MainBlock = () => {
   const [news, setNews] = useState([]);
+  const [secondNews, setSecondNews] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,14 +17,22 @@ const MainBlock = () => {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const newsData = await fetchNews(4);
+      setSecondNews(newsData);
+    };
+    fetchData();
+  }, []);
+
   return (
     <div className="flex w-full min-h-screen flex-col  px-20">
-      <SecondTitle title="Hot News 🔥" />
       <div className="flex mb-2">
-        <MainNews news={news} />
+        <MainNews news={news} title={'Hot News 🔥'} />
         <SideNews />
       </div>
       <SecondaryNews />
+      <MainNews news={secondNews} title={'Bestsellers 🔥'} />
     </div>
   );
 };

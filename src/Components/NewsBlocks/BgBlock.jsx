@@ -1,9 +1,15 @@
 import React from 'react';
 import SecondTitle from '../Titles/SecondTitle';
+import { useNavigate } from 'react-router-dom';
 
 const BgBlock = ({ content }) => {
+  const router = useNavigate();
   return (
-    <div className="bg-white col-start-1 col-end-3 z-50 overflow-hidden group cursor-pointer">
+    <div
+      onClick={() => router(`/news-website/${content.id}`)}
+      className="bg-white col-start-1 col-end-3 z-50 overflow-hidden group cursor-pointer"
+      key={content.id}
+    >
       <div className="w-full h-full relative">
         <div className=" absolute left-0 top-0 h-full w-full ">
           <img

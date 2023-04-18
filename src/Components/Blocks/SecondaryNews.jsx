@@ -15,6 +15,7 @@ const SecondaryNews = () => {
     };
     fetchData();
   }, []);
+
   return (
     <div>
       <SecondTitle title="Editor's Choice 🤌" />

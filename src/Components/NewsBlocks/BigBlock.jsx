@@ -1,9 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const BigBlock = ({ content }) => {
-  console.log(content.poster_path);
+  const router = useNavigate();
+
   return (
     <div
+      onClick={() => router(`/news-website/${content.id}`)}
       className="bg-white col-start-1 col-end-4 relative group cursor-pointer"
       key={content.id}
     >

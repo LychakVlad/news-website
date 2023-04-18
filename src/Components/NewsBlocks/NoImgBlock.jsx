@@ -1,9 +1,15 @@
 import React from 'react';
 import SecondTitle from '../Titles/SecondTitle';
+import { useNavigate } from 'react-router-dom';
 
 const NoImgBlock = ({ content }) => {
+  const router = useNavigate();
   return (
-    <div className="bg-white w-full h-full flex-col cursor-pointer">
+    <div
+      onClick={() => router(`/news-website/${content.id}`)}
+      className="bg-white w-full h-full flex-col cursor-pointer"
+      key={content.id}
+    >
       <div className="max-w-sm p-4 flex flex-col h-full justify-between">
         <p className="text-neutral-400">{content.original_title}</p>
         <div>

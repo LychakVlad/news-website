@@ -1,16 +1,25 @@
-import Footer from './Components/Blocks/Footer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import About from './Pages/About';
+import News from './Pages/News';
+import Error from './Pages/Error';
+import NewsIdPage from './Pages/NewsIdPage';
 import Header from './Components/Blocks/Header';
-import MainBlock from './Components/Blocks/MainBlock';
-import SocialLinks from './Components/Blocks/SocialLinks';
+import Footer from './Components/Blocks/Footer';
 
 function App() {
   return (
-    <div className="bg-gray-100">
-      <Header />
-      <MainBlock />
-      <SocialLinks />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <Routes>
+          <Route path="/about" element={<About />} />
+          <Route exact path="/news-website" element={<News />} />
+          <Route exact path="/news-website/:id" element={<NewsIdPage />} />
+          <Route path="/*" element={<Error />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

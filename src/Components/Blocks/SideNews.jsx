@@ -15,7 +15,7 @@ const SideNews = () => {
   }, []);
 
   return (
-    <div className="bg-white ml-10 px-6 max-w-xs max-h-[1450px] overflow-auto">
+    <div className="bg-white ml-10 px-6 max-w-xs max-h-[1450px] overflow-auto mt-24">
       <SecondTitle title={'News scroll'} />
       {news.map((item) => {
         return <SideBlock content={item} />;

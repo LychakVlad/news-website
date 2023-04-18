@@ -8,3 +8,10 @@ export const fetchNews = async (page) => {
   );
   return res.data.results;
 };
+
+export const fetchNewsById = async (id) => {
+  const res = await axios.get(
+    `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`
+  );
+  return res.data;
+};

@@ -1,8 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SmallBlock = ({ content }) => {
+  const router = useNavigate();
   return (
     <div
+      onClick={() => router(`/news-website/${content.id}`)}
       className="bg-white w-full h-full flex-col group cursor-pointer"
       key={content.id}
     >
