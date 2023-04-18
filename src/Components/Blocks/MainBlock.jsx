@@ -3,18 +3,17 @@ import MainNews from './MainNews';
 import SideNews from './SideNews';
 import SecondaryNews from './SecondaryNews';
 import SecondTitle from '../Titles/SecondTitle';
-import axios from 'axios';
+import { fetchNews } from '../../API/NewsAPI';
 
 const MainBlock = () => {
   const [news, setNews] = useState([]);
 
   useEffect(() => {
-    const fetchNews = async () => {
-      const res = await axios.get('https://reqres.in/api/users');
-      setNews(res);
-      console.log(news);
+    const fetchData = async () => {
+      const newsData = await fetchNews(1);
+      setNews(newsData);
     };
-    fetchNews();
+    fetchData();
   }, []);
 
   return (
@@ -24,7 +23,7 @@ const MainBlock = () => {
         <MainNews news={news} />
         <SideNews />
       </div>
-      {/* <SecondaryNews /> */}
+      <SecondaryNews />
     </div>
   );
 };

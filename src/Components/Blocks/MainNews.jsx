@@ -8,7 +8,7 @@ const MainNews = ({ news }) => {
       {news.map((item, index) => {
         if (index === 0) {
           return <BigBlock content={item} />;
-        } else if (index < 3 && index > 0) {
+        } else if (index < 4 && index > 0) {
           return <SmallBlock content={item} />;
         } else return void 0;
       })}
