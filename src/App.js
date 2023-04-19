@@ -9,7 +9,7 @@ import Contact from './Pages/Contact';
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen flex flex-col flex-auto">
+      <div className="flex flex-col h-screen overflow-hidden">
         <Header />
         <Routes>
           <Route path="/about" element={<About />} />

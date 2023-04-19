@@ -7,7 +7,7 @@ import { ReactComponent as Google } from '../assets/google.svg';
 
 const Contact = () => {
   return (
-    <div className=" w-full h-full flex flex-col items-center m-auto ">
+    <div className=" w-full h-full flex flex-col justify-center items-center m-auto bg-gray-100 grow">
       <SecondTitle title="You can use any of the following methods to contact me" />
       <div className="flex w-full max-w-xl justify-between mt-10">
         <a

@@ -52,7 +52,7 @@ const Filter = ({ setSelectedSource, setSortBy }) => {
           Lifehacker
         </button>
       </div>
-      <div className="flex items-center">
+      <div className="flex items-center ">
         <div className="px-10 py-3 transition-colors duration-300">
           Sort by:
         </div>
