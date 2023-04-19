@@ -5,7 +5,7 @@ import BgBlock from '../NewsBlocks/BgBlock';
 import NoImgBlock from '../NewsBlocks/NoImgBlock';
 
 const SecondaryNews = ({ news }) => {
-  return (
+  return news.length ? (
     <div>
       <SecondTitle title="Editor's Choice 🤌" />
       <div className="text-neutral-800 grid grid-cols-3 grid-rows-1 gap-4">
@@ -16,11 +16,11 @@ const SecondaryNews = ({ news }) => {
             return <SmallBlock content={item} />;
           } else if (index < 5 && index > 2) {
             return <NoImgBlock content={item} />;
-          } else return void 0;
+          } else return null;
         })}
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default SecondaryNews;

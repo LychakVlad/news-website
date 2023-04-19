@@ -2,7 +2,7 @@ import MainBlock from '../Components/Blocks/MainBlock';
 
 function News() {
   return (
-    <div className="bg-gray-100 pb-10">
+    <div className="bg-gray-100 pb-10 font-golos">
       <MainBlock />
     </div>
   );

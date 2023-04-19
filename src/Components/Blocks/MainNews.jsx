@@ -4,10 +4,10 @@ import BigBlock from '../NewsBlocks/BigBlock';
 import SecondTitle from '../Titles/SecondTitle';
 
 const MainNews = ({ news, title }) => {
-  return (
+  return news.length ? (
     <div>
       <SecondTitle title={title} />
-      <div className="text-neutral-800 grid grid-cols-3 grid-rows-1 gap-4 min-h-full w-full items-stretch">
+      <div className="text-neutral-800 grid grid-cols-3 grid-rows-1 gap-4 min-h-full w-full ">
         {news.map((item, index) => {
           if (index === 0) {
             return <BigBlock key={index} content={item} />;
@@ -17,7 +17,7 @@ const MainNews = ({ news, title }) => {
         })}
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default MainNews;

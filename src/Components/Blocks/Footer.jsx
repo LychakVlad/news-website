@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div className="bg-zinc-800 text-white text-lg h-24 w-full flex items-center justify-center m-auto">
+    <div className="bg-zinc-800 text-white text-lg h-24 w-full flex items-center justify-center mt-auto">
       <a
         href="https://github.com/LychakVlad"
         target="_blank"

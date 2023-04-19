@@ -7,9 +7,9 @@ import { ReactComponent as Google } from '../assets/google.svg';
 
 const Contact = () => {
   return (
-    <div className=" w-full mt-10 h-full flex flex-col items-center">
-      <SecondTitle title="Check out our social media" />
-      <div className="flex w-full max-w-xl justify-between mb-10">
+    <div className=" w-full h-full flex flex-col items-center m-auto ">
+      <SecondTitle title="You can use any of the following methods to contact me" />
+      <div className="flex w-full max-w-xl justify-between mt-10">
         <a
           href="mailto: lycakvladislav@gmail.com"
           className="hover:opacity-70  transition-opacity duration-300 "

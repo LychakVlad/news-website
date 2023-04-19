@@ -4,7 +4,7 @@ import LinkButton from '../Blocks/LinkButton';
 const BigBlock = ({ content }) => {
   return (
     <div
-      className="bg-white col-start-1 col-end-3 relative group cursor-pointer"
+      className="bg-white col-start-1 col-end-4 relative group"
       key={content.title}
     >
       <div className="flex h-full">
