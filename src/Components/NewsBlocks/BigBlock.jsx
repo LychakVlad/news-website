@@ -1,30 +1,31 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import LinkButton from '../Blocks/LinkButton';
 
 const BigBlock = ({ content }) => {
-  const router = useNavigate();
-
   return (
     <div
-      onClick={() => router(`/news-website/${content.id}`)}
-      className="bg-white col-start-1 col-end-4 relative group cursor-pointer"
-      key={content.id}
+      className="bg-white col-start-1 col-end-3 relative group cursor-pointer"
+      key={content.title}
     >
       <div className="flex h-full">
-        <div className="w-full h-full max-h-[500px] overflow-hidden">
+        <div className="w-full h-full  overflow-hidden">
           <img
-            src={`https://image.tmdb.org/t/p/original${content.poster_path}`}
+            src={content.urlToImage}
             alt="img"
             className="w-full h-full object-center object-cover group-hover:scale-110 transition-transform duration-300"
           />
         </div>
-        <div className="max-w-sm p-10">
+        <div className="max-w-sm px-8 py-4 flex flex-col justify-between">
+          <p className="text-neutral-400 mb-5">{content.source.name}</p>
           <h2 className=" text-2xl font-bold mb-6">{content.title}</h2>
-          <p className="mb-6">{content.overview}</p>
-          <div className="flex">
-            <p className="mr-4 text-rose-600">{content.release_date}</p>
-            <p className="text-neutral-400">{content.original_title}</p>
+          <p className="mb-6">{content.description}</p>
+          <div className="flex justify-between">
+            <p className="mr-4 text-rose-600">
+              {content.publishedAt.slice(11, 16)}
+            </p>
+            <p className="text-neutral-400">{content.author}</p>
           </div>
+          <LinkButton url={content.url} title={'Link to original'} />
         </div>
       </div>
     </div>

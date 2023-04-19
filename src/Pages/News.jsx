@@ -1,11 +1,9 @@
 import MainBlock from '../Components/Blocks/MainBlock';
-import SocialLinks from '../Components/Blocks/SocialLinks';
 
 function News() {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 pb-10">
       <MainBlock />
-      <SocialLinks />
     </div>
   );
 }

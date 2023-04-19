@@ -1,21 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import SmallBlock from '../NewsBlocks/SmallBlock';
 import SecondTitle from '../Titles/SecondTitle';
 import BgBlock from '../NewsBlocks/BgBlock';
 import NoImgBlock from '../NewsBlocks/NoImgBlock';
-import { fetchNews } from '../../API/NewsAPI';
 
-const SecondaryNews = () => {
-  const [news, setNews] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const newsData = await fetchNews(3);
-      setNews(newsData);
-    };
-    fetchData();
-  }, []);
-
+const SecondaryNews = ({ news }) => {
   return (
     <div>
       <SecondTitle title="Editor's Choice 🤌" />

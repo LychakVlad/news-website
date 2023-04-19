@@ -1,17 +1,24 @@
 import axios from 'axios';
 
-const API_KEY = '66eb3bde9cca0487f03e78b512b451e4';
-
-export const fetchNews = async (page) => {
+export const fetchNews = async (page, pageSize = 100) => {
   const res = await axios.get(
-    `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_watch_monetization_types=flatrate`
+    'https://newsapi.org/v2/everything?' +
+      'q=Apple&' +
+      'from=2023-03-18&' +
+      'sortBy=popularity&' +
+      'apiKey=b66c9785dec149d4aeb537c8caf5c053'
   );
-  return res.data.results;
+
+  return res.data.articles;
 };
 
 export const fetchNewsById = async (id) => {
   const res = await axios.get(
-    `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`
+    'https://newsapi.org/v2/everything?' +
+      'q=Apple&' +
+      'from=2023-03-18&' +
+      'sortBy=popularity&' +
+      'apiKey=b66c9785dec149d4aeb537c8caf5c053'
   );
   return res.data;
 };

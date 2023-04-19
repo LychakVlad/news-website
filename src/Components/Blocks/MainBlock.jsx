@@ -1,38 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import MainNews from './MainNews';
-import SideNews from './SideNews';
 import SecondaryNews from './SecondaryNews';
-import SecondTitle from '../Titles/SecondTitle';
+import Filter from './Filter';
 import { fetchNews } from '../../API/NewsAPI';
 
 const MainBlock = () => {
   const [news, setNews] = useState([]);
-  const [secondNews, setSecondNews] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const newsData = await fetchNews(1);
+      const newsData = await fetchNews();
       setNews(newsData);
     };
     fetchData();
   }, []);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const newsData = await fetchNews(4);
-      setSecondNews(newsData);
-    };
-    fetchData();
-  }, []);
+  const topNews = news.slice(0, 8);
+  const secondaryNews = news.slice(9, 14);
+  const bestsellerNews = news.slice(15, 20);
 
   return (
-    <div className="flex w-full min-h-screen flex-col  px-20">
-      <div className="flex mb-2">
-        <MainNews news={news} title={'Hot News 🔥'} />
-        <SideNews />
-      </div>
-      <SecondaryNews />
-      <MainNews news={secondNews} title={'Bestsellers 🔥'} />
+    <div className="px-20">
+      <Filter />
+      <MainNews news={topNews} title={'Hot News 🔥'} />
+      <SecondaryNews news={secondaryNews} />
+      <MainNews news={bestsellerNews} title={'Bestsellers 🔥'} />
     </div>
   );
 };

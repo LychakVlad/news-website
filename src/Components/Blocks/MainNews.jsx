@@ -7,13 +7,13 @@ const MainNews = ({ news, title }) => {
   return (
     <div>
       <SecondTitle title={title} />
-      <div className="text-neutral-800 grid grid-cols-3 grid-rows-1 gap-4">
+      <div className="text-neutral-800 grid grid-cols-3 grid-rows-1 gap-4 min-h-full w-full items-stretch">
         {news.map((item, index) => {
           if (index === 0) {
-            return <BigBlock content={item} />;
-          } else if (index < 4 && index > 0) {
-            return <SmallBlock content={item} />;
-          } else return void 0;
+            return <BigBlock key={index} content={item} />;
+          } else if (index < 8 && index > 0) {
+            return <SmallBlock key={index} content={item} />;
+          } else return null;
         })}
       </div>
     </div>

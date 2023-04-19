@@ -1,11 +1,11 @@
 import React from 'react';
-import SecondTitle from '../Titles/SecondTitle';
-import { ReactComponent as Telegram } from '../../assets/telegram.svg';
-import { ReactComponent as Github } from '../../assets/github.svg';
-import { ReactComponent as Linkedin } from '../../assets/linkedin.svg';
-import { ReactComponent as Google } from '../../assets/google.svg';
+import SecondTitle from '../Components/Titles/SecondTitle';
+import { ReactComponent as Telegram } from '../assets/telegram.svg';
+import { ReactComponent as Github } from '../assets/github.svg';
+import { ReactComponent as Linkedin } from '../assets/linkedin.svg';
+import { ReactComponent as Google } from '../assets/google.svg';
 
-const SocialLinks = () => {
+const Contact = () => {
   return (
     <div className=" w-full mt-10 h-full flex flex-col items-center">
       <SecondTitle title="Check out our social media" />
@@ -47,4 +47,4 @@ const SocialLinks = () => {
   );
 };
 
-export default SocialLinks;
+export default Contact;
