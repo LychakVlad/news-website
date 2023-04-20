@@ -4,6 +4,7 @@ import SecondaryNews from './SecondaryNews';
 import Filter from './Filter';
 import { fetchNews } from '../../API/NewsAPI';
 import LoadingBlock from '../NewsBlocks/LoadingBlock';
+import NothingBlock from '../NewsBlocks/NothingBlock';
 
 const MainBlock = () => {
   const [news, setNews] = useState([]);
@@ -43,8 +44,9 @@ const MainBlock = () => {
       </div>
 
       <Filter setSelectedSource={setSelectedSource} setSortBy={setSortBy} />
-
-      {loading ? (
+      {filteredNews.length === 0 ? (
+        <NothingBlock />
+      ) : loading ? (
         <LoadingBlock />
       ) : (
         <>

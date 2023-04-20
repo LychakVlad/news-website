@@ -1,2 +1,2 @@
-fix footer bg problem
+Add state when nothing found
 add responsive
