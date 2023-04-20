@@ -1,6 +1,6 @@
-import axios from 'axios';
+const axios = require('axios');
 
-export const fetchNews = async (source, sortByWhat) => {
+module.exports = async function fetchNews(source, sortByWhat) {
   const params = {
     q: 'Social',
     from: '2023-04-01',
@@ -8,7 +8,7 @@ export const fetchNews = async (source, sortByWhat) => {
     apiKey: 'b66c9785dec149d4aeb537c8caf5c053',
   };
 
-  const res = await axios.get('https://newsapi.org/v2/everything', { params });
+  const res = await axios.get('/news', { params });
 
   let filteredArticles = res.data.articles;
 
