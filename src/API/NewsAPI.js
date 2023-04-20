@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-module.exports = async function fetchNews(source, sortByWhat) {
+module.exports.fetchNews = async function fetchNews(source, sortByWhat) {
   const params = {
     q: 'Social',
     from: '2023-04-01',
