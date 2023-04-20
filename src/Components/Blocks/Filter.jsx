@@ -10,7 +10,36 @@ const Filter = ({ setSelectedSource, setSortBy }) => {
 
   return (
     <div className="flex justify-between font-semibold text-xl items-end text-zinc-700  mt-10 max-xl:flex-col max-xl:items-center">
-      <div>
+      <div className="hidden max-xl:flex items-center max-xl:mt-4 ">
+        <div className="px-10 py-3 transition-colors duration-300">Source:</div>
+        <select
+          className="rounded-lg px-4 py-2"
+          value={selectedButton}
+          onChange={(e) => {
+            setSelectedButton(e.target.value);
+            setSelectedSource(
+              e.target.options[e.target.selectedIndex].dataset.source
+            );
+          }}
+        >
+          <option value="all" data-source="">
+            All
+          </option>
+          <option value="engadget" data-source="Engadget">
+            Engadget
+          </option>
+          <option value="bbc" data-source="BBC News">
+            BBC
+          </option>
+          <option value="gizmodo" data-source="Gizmodo.com">
+            Gizmodo
+          </option>
+          <option value="lifehacker" data-source="Lifehacker.com">
+            Lifehacker
+          </option>
+        </select>
+      </div>
+      <div className="max-xl:hidden">
         <button
           onClick={() => handleClick('', 'all')}
           className={`px-10 rounded-lg py-3 focus:bg-zinc-700 hover:bg-zinc-700 focus:text-white hover:text-white transition-colors duration-300 mr-4  ${
