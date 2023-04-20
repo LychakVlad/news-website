@@ -1,5 +1,5 @@
 import React from 'react';
-import SecondTitle from '../Titles/SecondTitle';
+import SecondTitle from '../UI/Titles/SecondTitle';
 
 const BgBlock = ({ content }) => {
   return (

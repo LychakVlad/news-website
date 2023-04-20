@@ -1,7 +1,7 @@
 import React from 'react';
 import SmallBlock from '../NewsBlocks/SmallBlock';
 import BigBlock from '../NewsBlocks/BigBlock';
-import SecondTitle from '../Titles/SecondTitle';
+import SecondTitle from '../../Components/UI/Titles/SecondTitle';
 
 const MainNews = ({ news, title }) => {
   return news.length ? (

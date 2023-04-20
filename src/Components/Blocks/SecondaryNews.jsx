@@ -1,6 +1,6 @@
 import React from 'react';
 import SmallBlock from '../NewsBlocks/SmallBlock';
-import SecondTitle from '../Titles/SecondTitle';
+import SecondTitle from '../../Components/UI/Titles/SecondTitle';
 import BgBlock from '../NewsBlocks/BgBlock';
 import NoImgBlock from '../NewsBlocks/NoImgBlock';
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import SecondTitle from '../Titles/SecondTitle';
-import LinkButton from '../Blocks/LinkButton';
+import SecondTitle from '../UI/Titles/SecondTitle';
+import LinkButton from '../UI/LinkButton';
 
 const NoImgBlock = ({ content }) => {
   return (

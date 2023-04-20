@@ -1,5 +1,5 @@
 import React from 'react';
-import SecondTitle from '../Components/Titles/SecondTitle';
+import SecondTitle from '../Components/UI/Titles/SecondTitle';
 
 const About = () => {
   return (

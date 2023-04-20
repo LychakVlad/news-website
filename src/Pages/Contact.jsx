@@ -1,5 +1,5 @@
 import React from 'react';
-import SecondTitle from '../Components/Titles/SecondTitle';
+import SecondTitle from '../Components/UI/Titles/SecondTitle';
 import { ReactComponent as Telegram } from '../assets/telegram.svg';
 import { ReactComponent as Github } from '../assets/github.svg';
 import { ReactComponent as Linkedin } from '../assets/linkedin.svg';

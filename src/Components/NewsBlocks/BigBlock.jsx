@@ -1,5 +1,5 @@
 import React from 'react';
-import LinkButton from '../Blocks/LinkButton';
+import LinkButton from '../UI/LinkButton';
 
 const BigBlock = ({ content }) => {
   return (

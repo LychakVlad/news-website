@@ -11,7 +11,9 @@ const Filter = ({ setSelectedSource, setSortBy }) => {
   return (
     <div className="flex justify-between font-semibold text-xl items-end text-zinc-700  mt-10 max-xl:flex-col max-xl:items-center">
       <div className="hidden max-xl:flex items-center max-xl:mt-4 ">
-        <div className="px-10 py-3 transition-colors duration-300">Source:</div>
+        <div className="px-10 py-3 transition-colors duration-300 max-md:px-3">
+          Source:
+        </div>
         <select
           className="rounded-lg px-4 py-2"
           value={selectedButton}
@@ -82,7 +84,7 @@ const Filter = ({ setSelectedSource, setSortBy }) => {
         </button>
       </div>
       <div className="flex items-center max-xl:mt-4">
-        <div className="px-10 py-3 transition-colors duration-300">
+        <div className="px-10 py-3 transition-colors duration-300 max-md:px-3">
           Sort by:
         </div>
         <select
