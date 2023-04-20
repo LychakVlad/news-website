@@ -3,7 +3,7 @@ import FirstTitle from '../Titles/FirstTitle';
 
 const Header = () => {
   return (
-    <header className="bg-zinc-800 px-20 py-3 w-full flex items-center justify-between">
+    <header className="bg-zinc-800 px-20 py-3 w-full flex items-center justify-between max-lg:px-4">
       <FirstTitle title={'NEWS'} />
       <div className="text-white text-2xl">
         <a

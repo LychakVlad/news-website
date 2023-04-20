@@ -32,7 +32,7 @@ const MainBlock = () => {
   const bestsellerNews = filteredNews.slice(15, 19);
 
   return (
-    <div className="px-20 bg-gray-100 h-full grow">
+    <div className="px-20 bg-gray-100 h-full grow max-lg:px-4">
       <div className="flex justify-center items-center mt-10 ">
         <input
           className="outline-none py-3 px-32 text-center font-golos text-lg rounded"
@@ -44,7 +44,7 @@ const MainBlock = () => {
       </div>
 
       <Filter setSelectedSource={setSelectedSource} setSortBy={setSortBy} />
-      {filteredNews.length === 0 ? (
+      {filteredNews.length === 0 && !loading ? (
         <NothingBlock />
       ) : loading ? (
         <LoadingBlock />

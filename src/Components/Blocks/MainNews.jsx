@@ -7,7 +7,7 @@ const MainNews = ({ news, title }) => {
   return news.length ? (
     <div>
       <SecondTitle title={title} />
-      <div className="text-neutral-800 grid grid-cols-3 grid-rows-1 gap-4 min-h-full w-full ">
+      <div className="text-neutral-800 grid grid-cols-3 grid-rows-1 gap-4 min-h-full w-full max-xl:grid-cols-2  max-md:grid-cols-1 ">
         {news.map((item, index) => {
           if (index === 0) {
             return <BigBlock key={index} content={item} />;

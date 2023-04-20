@@ -5,7 +5,7 @@ const BgBlock = ({ content }) => {
   return (
     <a
       href={content.url}
-      className="bg-white col-start-1 col-end-3 z-50 overflow-hidden group cursor-pointer"
+      className="bg-white col-start-1 col-end-3 z-50 overflow-hidden group cursor-pointer max-lg:col-end-2"
       key={content.title}
     >
       <div className="w-full h-full relative">
@@ -18,8 +18,8 @@ const BgBlock = ({ content }) => {
         </div>
         <div className=" p-10 relative w-full h-full flex flex-col justify-end bg-gray-950 bg-opacity-40 text-white">
           <SecondTitle title={content.title} />
-          <div className="flex text-lg">
-            <p className="mr-4 ">{content.publishedAt}</p>
+          <div className="flex text-lg justify-between">
+            <p className="mr-4 "> {content.publishedAt.slice(11, 16)}</p>
             <p className="">{content.author}</p>
           </div>
         </div>

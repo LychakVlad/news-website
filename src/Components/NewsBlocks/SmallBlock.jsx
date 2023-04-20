@@ -5,7 +5,7 @@ import LinkButton from '../Blocks/LinkButton';
 const SmallBlock = ({ content }) => {
   return (
     <div className="h-full grid  bg-white relative group" key={content.title}>
-      <div className=" max-h-52 h-full overflow-hidden">
+      <div className=" max-h-52 min-h-[210px] h-full overflow-hidden">
         <img
           src={content.urlToImage}
           alt="img "
@@ -24,7 +24,7 @@ const SmallBlock = ({ content }) => {
           <p className="mr-4 text-rose-600">
             {content.publishedAt.slice(11, 16)}
           </p>
-          <p className="text-neutral-400">{content.source.name}</p>
+          <p className="text-neutral-400 mr-2">{content.source.name}</p>
           <p className="text-neutral-400">{content.author}</p>
         </div>
         <LinkButton url={content.url} title={'Link to original'} />

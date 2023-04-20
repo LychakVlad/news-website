@@ -4,8 +4,8 @@ import LinkButton from '../Blocks/LinkButton';
 
 const NoImgBlock = ({ content }) => {
   return (
-    <div className="bg-white w-full h-full flex-col " key={content.title}>
-      <div className="max-w-sm p-4 flex flex-col h-full justify-between">
+    <div className="bg-white w-full h-full flex-col" key={content.title}>
+      <div className="max-w-sm p-4 flex flex-col h-full justify-between max-lg:m-auto">
         <p className="text-neutral-400">{content.source.name}</p>
         <div>
           <SecondTitle title={content.title} />
@@ -15,10 +15,10 @@ const NoImgBlock = ({ content }) => {
               : content.description}
           </p>
         </div>
-        <p className="mr-4 text-rose-600 flex justify-between">
+        <div className="mr-4 text-rose-600 flex justify-between">
           {content.publishedAt.slice(11, 16)}
           <p className="text-neutral-400">{content.author}</p>
-        </p>
+        </div>
         <LinkButton url={content.url} title={'Link to original'} />
       </div>
     </div>

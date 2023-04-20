@@ -3,7 +3,7 @@ import SecondTitle from '../Components/Titles/SecondTitle';
 
 const About = () => {
   return (
-    <div className="px-20 bg-gray-100 grow">
+    <div className="px-20 bg-gray-100 grow max-lg:px-4">
       <SecondTitle title={'Welcome to our news website'} />
       <div className="text-lg max-w-3xl">
         <p className="mb-5">
