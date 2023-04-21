@@ -1,17 +1,19 @@
 const express = require('express');
 const request = require('request');
 const cors = require('cors');
-const port = 5001;
+require('dotenv').config();
+
+const port = process.env.PORT || 5001;
+const MY_KEY = process.env.REACT_APP_API_KEY;
 
 const app = express();
 app.use(cors());
 
-const API_KEY = 'b66c9785dec149d4aeb537c8caf5c053';
 const API_URL = 'https://newsapi.org/v2/everything';
 
 app.get('/news', (req, res) => {
   const { selectedSource } = req.query;
-  const url = `${API_URL}?q=${selectedSource}&apiKey=${API_KEY}`;
+  const url = `${API_URL}?q=${selectedSource}&apiKey=${MY_KEY}`;
 
   const options = {
     url,
