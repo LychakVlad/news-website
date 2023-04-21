@@ -2,26 +2,31 @@ import React, { useState, useEffect } from 'react';
 import MainNews from './MainNews';
 import SecondaryNews from './SecondaryNews';
 import Filter from './Filter';
-import { fetchNews } from '../../API/NewsAPI';
+import fetchNews from '../../API/NewsAPI';
 import LoadingBlock from '../NewsBlocks/LoadingBlock';
 import NothingBlock from '../NewsBlocks/NothingBlock';
 
 const MainBlock = () => {
   const [news, setNews] = useState([]);
-  const [selectedSource, setSelectedSource] = useState('');
+  const [selectedSource, setSelectedSource] = useState('engadget');
   const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('popularity');
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const newsData = await fetchNews(selectedSource, sortBy);
-      setNews(newsData);
-      setLoading(false);
+      console.log(selectedSource);
+      try {
+        const newsData = await fetchNews(selectedSource);
+        setNews(newsData.data);
+        setLoading(false);
+      } catch (error) {
+        console.error(error);
+        setLoading(false);
+      }
     };
     fetchData();
-  }, [selectedSource, sortBy]);
+  }, [selectedSource]);
 
   const filteredNews = news.filter((item) =>
     item.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -43,7 +48,7 @@ const MainBlock = () => {
         />
       </div>
 
-      <Filter setSelectedSource={setSelectedSource} setSortBy={setSortBy} />
+      <Filter setSelectedSource={setSelectedSource} />
       {filteredNews.length === 0 && !loading ? (
         <NothingBlock />
       ) : loading ? (

@@ -1,22 +1,18 @@
-const axios = require('axios');
+import axios from 'axios';
 
-module.exports.fetchNews = async function fetchNews(source, sortByWhat) {
+async function fetchNews(selectedSource) {
   const params = {
-    q: 'Social',
-    from: '2023-04-01',
-    sortBy: sortByWhat,
-    apiKey: 'b66c9785dec149d4aeb537c8caf5c053',
+    selectedSource,
   };
 
-  const res = await axios.get('/news', { params });
-
-  let filteredArticles = res.data.articles;
-
-  if (source) {
-    filteredArticles = res.data.articles.filter(
-      (article) => article.source.name === source
-    );
+  try {
+    const res = await axios.get('/news', { params });
+    console.log(res);
+    return res;
+  } catch (error) {
+    console.error(error);
+    return null;
   }
+}
 
-  return filteredArticles;
-};
+export default fetchNews;
