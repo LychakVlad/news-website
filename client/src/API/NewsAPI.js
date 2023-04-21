@@ -6,7 +6,9 @@ async function fetchNews(selectedSource) {
   };
 
   try {
-    const res = await axios.get('/news', { params });
+    const res = await axios.get('https://news-website-doli.onrender.com/news', {
+      params,
+    });
     console.log(res);
     return res;
   } catch (error) {

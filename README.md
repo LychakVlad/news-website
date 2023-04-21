@@ -21,16 +21,17 @@
 
 ## About The Project
 
-The News Website is a web application that provides users with the latest news and information on various topics. This project is developed using technologies such as HTML, CSS, and JavaScript, along with frameworks such as Tailwind and React. The application is responsive, which means it can be accessed from any device.
+The News Website is a web application that provides users with the latest news and information on various topics. This project is developed using technologies such as Tailwind and React with tiny server built with Node JS. The application is responsive, which means it can be accessed from any device.
 
-This project includes filtering and search functionality to help users quickly find the news they are looking for. Users can filter news wares based on their source site such as Engadget, BBC, Gizmodo, and Lifehacker. Additionally, the search bar allows users to search for specific news wares based on keywords.
+This project includes filtering and search functionality to help users quickly find the news they are looking for. Users can filter news wares based on their source site such as Engadget, BBC, NYT, and Lifehacker. Additionally, the search bar allows users to search for specific news wares based on keywords.
 
 ### Built With
 
 - REACT JS
 - HTML5
 - TAILWIND
-- NewsAPI
+- Node JS
+- Express JS
 
 ## Contact
 
