@@ -15,13 +15,13 @@ const Header = () => {
       <FirstTitle title={'NEWS'} />
       <div className="text-white text-2xl max-sm:hidden">
         <a
-          href="/about"
+          href="#/about"
           className="mr-20 hover:opacity-50 transition-opacity duration-300"
         >
           About
         </a>
         <a
-          href="/contact"
+          href="#/contact"
           className="hover:opacity-50 transition-opacity duration-300"
         >
           Contact
