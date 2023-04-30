@@ -15,7 +15,6 @@ const MainBlock = () => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-
       try {
         const newsData = await fetchNews(selectedSource);
         setNews(newsData.data);

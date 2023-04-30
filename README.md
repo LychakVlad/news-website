@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="https://lychakvlad.github.io/news-website/" target='_blank'>
-    <img src="./src/assets/logo.png" alt="Logo" width='900'>
+    <img src="./client/src/assets/logo.png" alt="Logo" width='900'>
 
 <h3 align="center">News website</h3>
 
