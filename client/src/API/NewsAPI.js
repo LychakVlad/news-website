@@ -6,9 +6,12 @@ async function fetchNews(selectedSource) {
   };
 
   try {
-    const res = await axios.get('https://sore-bee-underclothes.cyclic.app', {
-      params,
-    });
+    const res = await axios.get(
+      'https://news-website-production-57df.up.railway.app/news',
+      {
+        params,
+      }
+    );
     return res;
   } catch (error) {
     console.error(error);
