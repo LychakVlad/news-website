@@ -2,7 +2,7 @@
 
 <br />
 <div align="center">
-  <a href="https://lychakvlad.github.io/news-website/" target='_blank'>
+  <a href="https://fresh-news-website.netlify.app/#/news-website" target='_blank'>
     <img src="./client/src/assets/logo.png" alt="Logo" width='900'>
 
 <h3 align="center">News website</h3>
@@ -13,7 +13,7 @@
     <a href="https://github.com/LychakVlad/news-website"><strong>Explore the code »</strong></a>
     <br />
     <br />
-    <a href="https://lychakvlad.github.io/news-website/">View Demo</a>
+    <a href="https://fresh-news-website.netlify.app/#/news-website">View Demo</a>
   </p>
 </div>
 
@@ -28,7 +28,6 @@ This project includes filtering and search functionality to help users quickly f
 ### Built With
 
 - REACT JS
-- HTML5
 - TAILWIND
 - Node JS
 - Express JS
@@ -37,7 +36,7 @@ This project includes filtering and search functionality to help users quickly f
 
 Vladislav Lychak - [@LinkedIn](https://www.linkedin.com/in/vladislav-lychak/) - lycakvladislav@gmail.com
 
-Project Link: [https://github.com/LychakVlad/news-website](https://github.com/LychakVlad/news-website)
+Project Link: [https://fresh-news-website.netlify.app/#/news-website](https://fresh-news-website.netlify.app/#/news-website)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
