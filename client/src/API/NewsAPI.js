@@ -6,7 +6,7 @@ async function fetchNews(selectedSource) {
   };
 
   try {
-    const res = await axios.get('https://news-website-doli.onrender.com/news', {
+    const res = await axios.get('https://sore-bee-underclothes.cyclic.app', {
       params,
     });
     return res;
